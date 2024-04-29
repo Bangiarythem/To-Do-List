@@ -8,27 +8,36 @@
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 <link href="./style.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-indigo-500 to-black">
-  <div class="container mx-auto px-4">
-    <h1 class="block w-full text-center text-white font-extrabold mb-6 mt-6">To-Do App</h1>
-    <div class="flex p-4  font-bold">
-      <span class="flex-1 text-center text-white">Item count: <span id="item-count">0</span></span>
-      <span class="flex-1 text-center text-whi">Unchecked count: <span id="unchecked-count">0</span></span>
+<body class="bg-gradient-to-r from-indigo-500 to-black min-h-screen flex items-center justify-center">
+  <div class="container mx-auto px-4 py-8 bg-white rounded-lg shadow-lg w-full max-w-md">
+    <div class="mb-8">
+    <h1 class="text-center text-4xl text-gray-800 font-bold mb-4">To-Do App</h1>
+    <div class="flex justify-between items-center mb-6">
+      <span class="text-gray-700">Item count: <span id="item-count">0</span></span>
+      <span class="text-gray-700">Unchecked count: <span id="unchecked-count">0</span></span>
     </div>
-    <div class="flex shadow bg-white p-2">
-      <input id="todo-input" class="w-full rounded text-gray-700 p-2" type="text" placeholder="Title..." maxlength="50" required>
+    <div class="flex items-center mb-4">
+      <input id="todo-input" class="w-full rounded-l-lg border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-gray-200 p-2" type="text" placeholder="Title..." maxlength="50" required>
       <div onClick="newTodo();" class="bg-green-500 hover:bg-green-400 rounded text-white p-2 pl-5 pr-5 cursor-pointer">
-        <span class="font-semibold text-teal-100 text-sm cursor-pointer">Add</span>
+        <span class="bg-green-500 hover:bg-green-400 rounded-r-lg text-white p-2 pl-5 pr-5 cursor-pointer">Add</span>
       </div>
     </div>
+    <div class="bg-gray-200 p-4 rounded-lg">
+      <div class="todo-list">
+        <h2 class="text-lg font-bold mb-4">Your To-Do List</h2>
     <div id="todo-list"></div>
   </div>
+</div>
+</div>
+<div class="mt-8">
+  <div class="footer flex justify-center">
+    <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-lg cursor-pointer">Clear All</button>
+  </div>
+</div>
+</div>
   <script src="./script.js"></script>
 </body>
 </html>
-
-
-
 
 
 
